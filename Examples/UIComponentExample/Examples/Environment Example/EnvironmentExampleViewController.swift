@@ -17,6 +17,42 @@ class EnvironmentExampleViewController: ComponentViewController {
                 .centered()
                 .backgroundColor(.systemRed)
                 .roundedCorner()
+            
+            HStack(spacing: 10, alignItems: .stretch) {
+                HStack(spacing: 5, alignItems: .stretch) {
+                    Label("Share", systemImage: "square.and.arrow.up.fill")
+                        .centered()
+                        .backgroundColor(.systemGreen)
+                        .roundedCorner()
+                        .labelStyle(.titleAndIcon(layout: .horizontal, alignment: .center, isReversal: false, spacing: 5))
+                        .flex()
+                    Label("Remove", systemImage: "trash.fill")
+                        .centered()
+                        .backgroundColor(.systemRed)
+                        .roundedCorner()
+                        .labelStyle(.titleAndIcon(layout: .horizontal, alignment: .center, isReversal: true, spacing: 5))
+                        .flex()
+                }
+                .font(.systemFont(ofSize: 14, weight: .semibold))
+                .flex(0.4)
+                HStack(spacing: 5, alignItems: .stretch) {
+                    Label("Share", systemImage: "square.and.arrow.up.fill")
+                        .centered()
+                        .backgroundColor(.systemGreen)
+                        .roundedCorner()
+                        .labelStyle(.titleAndIcon(layout: .vertical, alignment: .center, isReversal: false, spacing: 5))
+                        .flex()
+                    Label("Remove", systemImage: "trash.fill")
+                        .centered()
+                        .backgroundColor(.systemRed)
+                        .roundedCorner()
+                        .labelStyle(.titleAndIcon(layout: .vertical, alignment: .center, isReversal: true, spacing: 5))
+                        .flex()
+                }
+                .font(.systemFont(ofSize: 12))
+                .flex(0.6)
+            }
+            .size(height: 44)
             let fontSizes: [CGFloat] = [12,14,16,18,20,22,24,26,28,30]
             VStack(spacing: 10) {
                 HStack(spacing: 5) {
